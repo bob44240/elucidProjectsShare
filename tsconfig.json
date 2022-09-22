@@ -8,6 +8,10 @@
       "demo-lib": [
         "dist/demo-lib/demo-lib",
         "dist/demo-lib"
+      ],
+      "demo-report": [
+        "dist/demo-report/demo-report",
+        "dist/demo-report"
       ]
     },
     "forceConsistentCasingInFileNames": true,
@@ -22,10 +26,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

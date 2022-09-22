@@ -26,13 +26,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -94,13 +89,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
@@ -133,6 +123,37 @@
             "main": "projects/demo-lib/src/test.ts",
             "tsConfig": "projects/demo-lib/tsconfig.spec.json",
             "karmaConfig": "projects/demo-lib/karma.conf.js"
+          }
+        }
+      }
+    },
+    "demo-report": {
+      "projectType": "library",
+      "root": "projects/demo-report",
+      "sourceRoot": "projects/demo-report/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/demo-report/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/demo-report/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/demo-report/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/demo-report/src/test.ts",
+            "tsConfig": "projects/demo-report/tsconfig.spec.json",
+            "karmaConfig": "projects/demo-report/karma.conf.js"
           }
         }
       }

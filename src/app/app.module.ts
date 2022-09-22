@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoLibModule } from 'demo-lib';
+import { DemoLibModule } from 'projects/demo-lib/src/public-api';
 
 @NgModule({
   declarations: [AppComponent],
